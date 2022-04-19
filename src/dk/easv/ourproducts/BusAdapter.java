@@ -3,7 +3,7 @@ package dk.easv.ourproducts;
 import dk.easv.theirproducts.Bus;
 
 public class BusAdapter extends Vehicle{
-
+    public static Bus bus;
     public BusAdapter(Color color) {
         super(color);
 
@@ -12,7 +12,7 @@ public class BusAdapter extends Vehicle{
 
     @Override
     public double getTopSpeedInKilometersPerHour() {
-        return 50;
+        return bus.topSpeedInMilesPerHour*1.609344;
     }
 
     @Override
